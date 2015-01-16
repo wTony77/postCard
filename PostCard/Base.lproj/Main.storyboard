@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dOr-sw-GKt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -60,16 +61,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jRU-QR-10s">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddc-7e-2gP">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uP-6F-y1J">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -77,7 +68,7 @@
                                         <variation key="widthClass=compact" constant="219"/>
                                     </constraint>
                                     <constraint firstAttribute="height" constant="21" id="qgX-en-Gyo">
-                                        <variation key="widthClass=compact" constant="68"/>
+                                        <variation key="widthClass=compact" constant="49"/>
                                     </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -115,6 +106,16 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jRU-QR-10s">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddc-7e-2gP">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRI-IP-TyH">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.90593112244897955" green="0.54992254978379562" blue="0.10284341604553224" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,13 +145,39 @@
                                     <action selector="sendButton:" destination="Xi6-hy-Yl2" eventType="touchUpInside" id="ZGL-dy-sy8"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKt-Vb-eio">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="BMP-3f-cdh"/>
+                                    <constraint firstAttribute="height" constant="21" id="hal-w3-yPu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BMP-3f-cdh"/>
+                                        <exclude reference="hal-w3-yPu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="BMP-3f-cdh"/>
+                                        <include reference="hal-w3-yPu"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GRI-IP-TyH" firstAttribute="top" secondItem="5uP-6F-y1J" secondAttribute="bottom" constant="18" id="88i-lO-Gi2"/>
-                            <constraint firstItem="jRU-QR-10s" firstAttribute="top" secondItem="8S8-aC-BsW" secondAttribute="bottom" constant="66" id="DWW-Eo-tXz">
-                                <variation key="widthClass=compact" constant="19"/>
+                            <constraint firstItem="xKt-Vb-eio" firstAttribute="top" secondItem="5uP-6F-y1J" secondAttribute="bottom" constant="24" id="81i-5N-y1O"/>
+                            <constraint firstItem="GRI-IP-TyH" firstAttribute="top" secondItem="5uP-6F-y1J" secondAttribute="bottom" constant="18" id="88i-lO-Gi2">
+                                <variation key="widthClass=compact" constant="75"/>
                             </constraint>
+                            <constraint firstItem="jRU-QR-10s" firstAttribute="top" secondItem="8S8-aC-BsW" secondAttribute="bottom" constant="66" id="DWW-Eo-tXz">
+                                <variation key="widthClass=compact" constant="57"/>
+                            </constraint>
+                            <constraint firstItem="GRI-IP-TyH" firstAttribute="top" secondItem="xKt-Vb-eio" secondAttribute="bottom" constant="30" id="EEr-iz-Tok"/>
                             <constraint firstItem="ddc-7e-2gP" firstAttribute="leading" secondItem="6Hd-Id-NvR" secondAttribute="leadingMargin" id="HUK-Ol-MfM"/>
                             <constraint firstItem="jRU-QR-10s" firstAttribute="trailing" secondItem="6Hd-Id-NvR" secondAttribute="trailingMargin" id="IHU-p8-8Lk"/>
                             <constraint firstItem="jRU-QR-10s" firstAttribute="leading" secondItem="6Hd-Id-NvR" secondAttribute="leadingMargin" id="KLO-VN-mtz"/>
@@ -161,6 +188,7 @@
                             </constraint>
                             <constraint firstItem="5uP-6F-y1J" firstAttribute="leading" secondItem="6Hd-Id-NvR" secondAttribute="leadingMargin" id="jC4-iu-MgC"/>
                             <constraint firstItem="GRI-IP-TyH" firstAttribute="leading" secondItem="6Hd-Id-NvR" secondAttribute="leadingMargin" id="oj7-Iw-ZYu"/>
+                            <constraint firstItem="xKt-Vb-eio" firstAttribute="leading" secondItem="6Hd-Id-NvR" secondAttribute="leadingMargin" id="pJa-Ia-mIg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8S8-aC-BsW" secondAttribute="trailing" constant="10" id="t1m-L0-7B5">
                                 <variation key="widthClass=compact" constant="8"/>
                             </constraint>
@@ -170,46 +198,54 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="jRU-QR-10s"/>
-                                <exclude reference="ddc-7e-2gP"/>
                                 <exclude reference="5uP-6F-y1J"/>
                                 <exclude reference="8S8-aC-BsW"/>
+                                <exclude reference="jRU-QR-10s"/>
+                                <exclude reference="ddc-7e-2gP"/>
                                 <exclude reference="GRI-IP-TyH"/>
+                                <exclude reference="xKt-Vb-eio"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="c5P-1W-Jgv"/>
                                 <exclude reference="jC4-iu-MgC"/>
-                                <exclude reference="88i-lO-Gi2"/>
-                                <exclude reference="oj7-Iw-ZYu"/>
-                                <exclude reference="DWW-Eo-tXz"/>
-                                <exclude reference="IHU-p8-8Lk"/>
-                                <exclude reference="KLO-VN-mtz"/>
                                 <exclude reference="HUK-Ol-MfM"/>
                                 <exclude reference="TZn-gW-pab"/>
                                 <exclude reference="aqH-Ae-oTY"/>
+                                <exclude reference="DWW-Eo-tXz"/>
+                                <exclude reference="IHU-p8-8Lk"/>
+                                <exclude reference="KLO-VN-mtz"/>
+                                <exclude reference="81i-5N-y1O"/>
+                                <exclude reference="pJa-Ia-mIg"/>
+                                <exclude reference="88i-lO-Gi2"/>
+                                <exclude reference="EEr-iz-Tok"/>
+                                <exclude reference="oj7-Iw-ZYu"/>
                                 <exclude reference="t1m-L0-7B5"/>
                                 <exclude reference="vP5-WP-C9l"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="jRU-QR-10s"/>
-                                <include reference="ddc-7e-2gP"/>
                                 <include reference="5uP-6F-y1J"/>
                                 <include reference="8S8-aC-BsW"/>
+                                <include reference="jRU-QR-10s"/>
+                                <include reference="ddc-7e-2gP"/>
                                 <include reference="GRI-IP-TyH"/>
+                                <include reference="xKt-Vb-eio"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="c5P-1W-Jgv"/>
                                 <include reference="jC4-iu-MgC"/>
-                                <include reference="88i-lO-Gi2"/>
-                                <include reference="oj7-Iw-ZYu"/>
-                                <include reference="DWW-Eo-tXz"/>
-                                <include reference="IHU-p8-8Lk"/>
-                                <include reference="KLO-VN-mtz"/>
                                 <include reference="HUK-Ol-MfM"/>
                                 <include reference="TZn-gW-pab"/>
                                 <include reference="aqH-Ae-oTY"/>
+                                <include reference="DWW-Eo-tXz"/>
+                                <include reference="IHU-p8-8Lk"/>
+                                <include reference="KLO-VN-mtz"/>
+                                <include reference="81i-5N-y1O"/>
+                                <include reference="pJa-Ia-mIg"/>
+                                <include reference="88i-lO-Gi2"/>
+                                <include reference="EEr-iz-Tok"/>
+                                <include reference="oj7-Iw-ZYu"/>
                                 <include reference="t1m-L0-7B5"/>
                                 <include reference="vP5-WP-C9l"/>
                             </mask>
@@ -220,6 +256,7 @@
                         <outlet property="enterNameTextField" destination="jRU-QR-10s" id="a0s-aa-nub"/>
                         <outlet property="mailButton" destination="GRI-IP-TyH" id="xRs-r8-KWz"/>
                         <outlet property="messageLabel" destination="5uP-6F-y1J" id="dB8-5a-KsY"/>
+                        <outlet property="nameLabel" destination="xKt-Vb-eio" id="OYb-XL-6V9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWz-Kj-NdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
