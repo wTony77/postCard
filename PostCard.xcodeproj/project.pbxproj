@@ -13,6 +13,8 @@
 		EA9513311A685334000CD9F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9513301A685334000CD9F6 /* Images.xcassets */; };
 		EA9513341A685334000CD9F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9513321A685334000CD9F6 /* LaunchScreen.xib */; };
 		EA9513401A685334000CD9F6 /* PostCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA95133F1A685334000CD9F6 /* PostCardTests.swift */; };
+		EA95134C1A686FD3000CD9F6 /* stamp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA95134A1A686FD3000CD9F6 /* stamp.jpg */; };
+		EA95134E1A687233000CD9F6 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA95134D1A687233000CD9F6 /* back.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		EA9513391A685334000CD9F6 /* PostCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA95133E1A685334000CD9F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA95133F1A685334000CD9F6 /* PostCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardTests.swift; sourceTree = "<group>"; };
+		EA95134A1A686FD3000CD9F6 /* stamp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stamp.jpg; sourceTree = "<group>"; };
+		EA95134D1A687233000CD9F6 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				EA9513281A685334000CD9F6 /* Info.plist */,
+				EA95134D1A687233000CD9F6 /* back.jpg */,
+				EA95134A1A686FD3000CD9F6 /* stamp.jpg */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -192,6 +198,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA95134C1A686FD3000CD9F6 /* stamp.jpg in Resources */,
+				EA95134E1A687233000CD9F6 /* back.jpg in Resources */,
 				EA95132F1A685334000CD9F6 /* Main.storyboard in Resources */,
 				EA9513341A685334000CD9F6 /* LaunchScreen.xib in Resources */,
 				EA9513311A685334000CD9F6 /* Images.xcassets in Resources */,
