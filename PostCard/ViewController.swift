@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         enterMessageTextField.resignFirstResponder() // Function to hide keyboard () = function
         
         // setTitle func with parameters/information() that needs to be pass in
+        // test
         mailButton.setTitle("Mail Sent", forState: UIControlState.Normal)
         
     }
